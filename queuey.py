@@ -15,7 +15,7 @@ class Queuey:
         """ Adds an item to the queue, raising a TypeError if the wrong type of item is provided """
         if not isinstance(item,self.data_type):
             raise TypeError(f"invalid type provided, expected type {self.data_type} but got {type(item)}")
-        self.data_type(item)
+        self.q.append(item)
         self.size += 1
 
     def dequeue(self):
@@ -48,7 +48,7 @@ class Queuey:
 
         
 def main():
-    q = Queuey(data_type=float)
+    q = Queuey(float)
 
     print(f"Expected: None, got: {q.peek()}")
     print(q.length()) # 0
