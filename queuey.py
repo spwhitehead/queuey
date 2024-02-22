@@ -48,7 +48,7 @@ class Queuey:
 
         
 def main():
-    q = Queuey(float)
+    q = Queuey(data_type=float)
 
     print(f"Expected: None, got: {q.peek()}")
     print(q.length()) # 0
